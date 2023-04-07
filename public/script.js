@@ -15,7 +15,7 @@
 				return "EN";
 			case "ko":
 				return "KR";
-	
+
 			default:
 				if (lang.startsWith("zh-Hant"))
 					return "TC";
@@ -130,13 +130,15 @@
 
 								const _text = document.createElement("a");
 								_slot.appendChild(_text);
-								_text.target = "_blank";
-								_text.href = `https://lo.swaytwig.com/equips/${m}`;
 								_text.title = m;
 								if (!m) {
+									_text.addEventListener("click", e => e.preventDefault());
 									_text.innerText = "Empty slot";
-								} else
+								} else {
+									_text.target = "_blank";
+									_text.href = `https://lo.swaytwig.com/equips/${m}`;
 									_text.innerText = conv(m);
+								}
 
 								const _score = document.createElement("span");
 								_slot.appendChild(_score);
