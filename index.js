@@ -7,6 +7,8 @@ const { default: axios } = require("axios");
 
 const multipart = require("connect-multiparty")();
 
+const PORT = 50375;
+
 const app = express();
 app.use(express.static(path.resolve(__dirname, "public")));
 app.use("/icon", express.static(path.resolve(__dirname, "template")));
@@ -42,6 +44,6 @@ app.get("/locale", (req, res) => {
 			res.send(locale);
 		});
 });
-app.listen(8088, () => {
-	console.log("Listen on localhost:8088");
+app.listen(PORT, () => {
+	console.log("Listen on localhost:PORT");
 });
