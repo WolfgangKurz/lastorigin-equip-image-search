@@ -77,7 +77,7 @@ def main(INPUT):
     # min_h, min_w = slot_template.shape
     min_h, min_w = 120, 498
 
-    def mat2loc(res: cv.Mat, tm: int = None) -> tuple[int, int]:
+    def mat2loc(res: cv.Mat, tm: int = None): # -> tuple[int, int]:
         if tm is None:
             tm = TM
 

@@ -101,10 +101,10 @@ input:disabled {
 .parsed .slot > img[data-empty="1"] {
 	visibility: hidden;
 }
-.parsed .slot > img[data-empty="1"] + span {
+.parsed .slot > img[data-empty="1"] ~ span {
 	color: #999;
 }
-.parsed .slot span + span {
+.parsed .slot span {
 	/* score */
 	display: block;
 	font-size: 80%;
