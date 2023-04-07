@@ -16,7 +16,7 @@ app.post("/check", multipart, async (req, res) => {
 
 	let t = Date.now();
 	await new Promise(r => {
-		const p = cp.exec(`py ./main.py "${inp}"`);
+		const p = cp.exec(`python3 ./main.py "${inp}"`);
 		p.once("exit", () => r());
 		p.stdout.on("data", data => (ret += data));
 	});
