@@ -1,10 +1,11 @@
 {
   "name": "equip-image-search",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "index.js",
   "dependencies": {
     "axios": "^1.3.5",
     "connect-multiparty": "^2.2.0",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "yaml": "^2.6.1"
   }
 }
